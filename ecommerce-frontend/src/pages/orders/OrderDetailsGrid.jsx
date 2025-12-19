@@ -1,7 +1,7 @@
 import axios from "axios";
 import dayjs from "dayjs";
 import { Fragment } from "react";
-import api from ".src/api/axios.ts";
+import api from "./src/api/axios.ts";
 
 export function OrderDetailsGrid({ order, loadCart }) {
   return (

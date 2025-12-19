@@ -3,7 +3,7 @@ import { useState, useEffect, Fragment } from 'react'
 import { Header } from '../../components/Header'
 import './OrdersPage.css'
 import { OrdersGrid } from './OrdersGrid';
-import api from ".src/api/axios.ts";
+import api from "./src/api/axios.ts";
 
 export function OrdersPage({ cart, loadCart }) {
   const [orders, setOrders] = useState([]);

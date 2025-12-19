@@ -2,7 +2,7 @@ import { it, expect, describe, vi, beforeEach } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, useLocation } from 'react-router';
-import api from ".src/api/axios.ts";
+import api from "./src/api/axios.ts";
 import { PaymentSummary } from './PaymentSummary';
 
 vi.mock('axios');

@@ -1,4 +1,4 @@
-import api from ".src/api/axios.ts";
+import api from "./src/api/axios.ts";
 import { formatMoney } from "../../utils/money";
 import { useState } from "react";
 

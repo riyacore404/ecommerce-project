@@ -4,7 +4,7 @@ import './TrackingPage.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import dayjs from 'dayjs';
-import api from ".src/api/axios.ts";
+import api from "./src/api/axios.ts";
 
 export function TrackingPage({ cart }) {
   const { orderId, productId } = useParams();
