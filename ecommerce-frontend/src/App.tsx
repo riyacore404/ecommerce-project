@@ -7,7 +7,7 @@ import { OrdersPage } from './pages/orders/OrdersPage'
 import { TrackingPage } from './pages/tracking/TrackingPage'
 import { NotFoundPage } from './pages/notfoundpage/NotFoundPage'
 import './App.css'
-import api from "./src/api/axios.ts";
+import api from "./api/axios";
 
 function App() {
   const [cart, setCart] = useState([]);

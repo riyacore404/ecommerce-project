@@ -1,4 +1,4 @@
-import api from "./src/api/axios.ts";
+import api from "../../api/axios";
 import dayjs from "dayjs";
 import { formatMoney } from "../../utils/money";
 

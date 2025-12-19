@@ -1,4 +1,4 @@
-import api from "./src/api/axios.ts";
+import api from "../../api/axios";
 import { useSearchParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import { Header } from '../../components/Header';
