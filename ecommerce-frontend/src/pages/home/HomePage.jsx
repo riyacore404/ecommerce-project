@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from "./api/axios";
 import { useSearchParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import { Header } from '../../components/Header';
@@ -12,9 +12,9 @@ export function HomePage({ cart, loadCart }) {
   
   useEffect(() => {
     const getHomeData = async () => {
-      // const response = await axios.get('/api/products')
+      // const response = await api.get('/api/products')
       const urlPath = search ? `/api/products?search=${search}` : '/api/products';
-      const response = await axios.get(urlPath);
+      const response = await api.get(urlPath);
       setProducts(response.data);
     };
     

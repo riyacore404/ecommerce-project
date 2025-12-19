@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from "./api/axios";
 import { useState, useEffect } from 'react'
 import './CheckoutHeader.css'
 import { CheckoutHeader } from './CheckoutHeader'
@@ -13,7 +13,7 @@ export function CheckoutPage({ cart, loadCart }) {
 
   useEffect(() => {
     const fetchCheckoutData = async () => {
-      const response = await axios.get('./api/delivery-options?expand=estimatedDeliveryTime')
+      const response = await api.get('./api/delivery-options?expand=estimatedDeliveryTime')
       setDeliveryOptions(response.data);
     }
 
@@ -22,7 +22,7 @@ export function CheckoutPage({ cart, loadCart }) {
 
   useEffect(() => {
     const fetchCheckoutData = async () => {
-      const response = await axios.get('./api/payment-summary')
+      const response = await api.get('./api/payment-summary')
       setPaymentSummary(response.data);
     }
 

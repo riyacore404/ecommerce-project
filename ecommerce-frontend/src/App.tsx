@@ -7,12 +7,13 @@ import { OrdersPage } from './pages/orders/OrdersPage'
 import { TrackingPage } from './pages/tracking/TrackingPage'
 import { NotFoundPage } from './pages/notfoundpage/NotFoundPage'
 import './App.css'
+import api from "./api/axios";
 
 function App() {
   const [cart, setCart] = useState([]);
 
   const loadCart = async () => {
-    const response = await axios.get('/api/cart-items?expand=product')
+    const response = await api.get('/api/cart-items?expand=product')
     setCart(response.data);
   }
   useEffect(() => {

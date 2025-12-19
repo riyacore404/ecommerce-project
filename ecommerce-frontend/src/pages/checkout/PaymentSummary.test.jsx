@@ -2,7 +2,7 @@ import { it, expect, describe, vi, beforeEach } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, useLocation } from 'react-router';
-import axios from 'axios';
+import api from "./api/axios";
 import { PaymentSummary } from './PaymentSummary';
 
 vi.mock('axios');
@@ -77,7 +77,7 @@ describe('PaymentSummary component', () => {
         const placeOrderButton = screen.getByTestId('place-order-button');
         await user.click(placeOrderButton);
 
-        expect(axios.post).toBeCalledWith('/api/orders');
+        expect(api.post).toBeCalledWith('/api/orders');
         expect(screen.getByTestId('url-path')).toHaveTextContent('/orders');
     });
 })
