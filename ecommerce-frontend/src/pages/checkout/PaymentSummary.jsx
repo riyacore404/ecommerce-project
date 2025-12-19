@@ -1,4 +1,4 @@
-import api from "./api/axios";
+import api from ".src/api/axios.ts";
 import { useNavigate } from "react-router";
 import { formatMoney } from "../../utils/money";
 
